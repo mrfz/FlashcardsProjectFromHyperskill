@@ -1,1 +1,18 @@
+.footer{
+  align-items: stretch;
+  justify-content: space-around ;
+}
 
+.column3{
+  align-self: flex-end;
+}
+
+.block {
+  background-size: 50%;
+  background-repeat: repeat-x;
+}
+
+.fish {
+  background-image: url("https://i.ibb.co/3rSwMQh/9634c84aee630758edb218053d8f04e7.jpg");
+  background-position: 75px 50px;
+}
