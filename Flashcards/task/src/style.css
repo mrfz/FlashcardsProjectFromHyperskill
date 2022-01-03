@@ -2,22 +2,29 @@
 body {
     font-family: 'Trispace', sans-serif;
     background-color: #FDF8ED;
-    align-content: center;
+
+}
+.content {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 .header {
     background-color: #587D71;
     border-radius: 20px;
     width:600px;
     color: #F9ECCC;
+    /*padding-left: 1%;*/
 }
 .cards-container {
+    left: 50%;
     vertical-align: center ;
     display: grid;
-    /*width: 600px;*/
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1% 1%;
-    /*margin: 5% 5%;*/
     grid-template-areas:
     "card1 card2 card3"
     "card4 card5 card6"
@@ -31,11 +38,31 @@ body {
 }
 .cards {
     border-radius: 15px;
-    background-color: #F9ECCC;
     height: 90%;
     width: 90%;
     text-align: center;
-    /*text-align-all: center;*/
+}
+
+.filler {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #F9ECCC;
+    transition: all 2s ease;
+    transform-style: preserve-3d;;
+    text-align-all: center;
+}
+
+.filler:hover {
+    transform: rotateY(180deg);
+    background-color: #F7934C;
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+.back {
+    transform: rotateY(180deg);
 }
 
 .card1 { grid-area: card1; }
